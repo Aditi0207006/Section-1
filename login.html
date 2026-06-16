@@ -3,40 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <title>Login Form</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
+
+
+
+
     <style>
-        .card{
-            border: 2px solid rgb(92, 3, 92);
-            width: 20%;
-            background-color: antiquewhite;
-            border-radius: 20px ;
-            padding:20px;
+        *{
+            font-family: 'Roboto';
         }
+        .card{
+            background-color: white;
+            /* .card:2px solid black; */
+            width: 60%;
+            border-radius: 20px;
+            padding: 20px;
+            /* x offset, y offset, blur radius, spread radius, color */
+            box-shadow: 10px 10px 30px 0 rgba(236, 138, 102, 0.86) ;
+
+        }
+
         body{
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: blueviolet;
+            /* background-color: rgba(237, 207, 211, 0.658); */
+            border-radius: 20%;
+            padding: 20px;
+            /*background-image: linear-gradient(130deg, rgba(81, 2, 72, 0.658), rgba(130, 51, 124, 0.86), rgb(242, 170, 226));*/
+            background-image: linear-gradient(130deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+            url(https://d39ghehfp8sbx4.cloudfront.net/media/img/1/381c0bae-ab27-4d85-b21c-0dd71279cb83-1400.jpg?placeid=2225&name=City%20Palace,%20Jaipur,%20Jaipur&lat=26.925772&lng=75.823662);
+            background-size: cover;
+           
         }
+
+        .form-title{
+            text-align: center;
+            font-size: 30px;
+        }
+
+        .text-input{
+            display: block;
+            width: 100%;
+            padding: 10px 10px;
+            border-radius: 50px;
+            box-sizing: border-box;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            border: 1px solid #ccc;
+            
+        }
+        .btn-submit{
+            display: block;
+            width: 100%;
+            padding: 10px 10px;
+            border-radius: 50px;
+            box-sizing: border-box;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            background-color: #270234;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .link{
+            text-decoration: none;
+            color: rgb(215, 26, 57);
+            margin: 10px 0px;
+            
+        }
+
+        .forget-link{
+            display: block;
+            text-align: left;
+        }
+        .signup-link{
+            display: block;
+            text-align: center;
+        }
+
     </style>
+
 </head>
+
 <body>
+    
     <div class="card">
-       <h2 class="form-title">Login form</h2>
-       <form>
+        <!-- <h2>Login</h2> -->
+        <h2 class="form-title">Login Form</h2>
 
-        <label for="">Email Address</label>
-        <input class="text-input" type="email">
+        <form>
+            <label for="Email">Email Address:</label>
+            <input class="text-input" type="email">
 
-        <br><br>
+            <br>
+            <br>
+            
 
-        <label for="">Password</label>
-        <input class="text-input" type="password">
+            <label for="password">Password:</label>
+            <input class="text-input" type="password">
 
-        <button class="btn-submit">Submit</button>
+            <br>
+            <br>
 
-       </form>
+            <a href="#" class="link forget-link">Forgot Password?</a>
+
+            <button class="btn-submit">Login</button>
+
+            <a href="#" class="link signup-link">
+              Don't have an account? Sign Up Now
+            </a>
+
+        </form>
     </div>
+
 </body>
 </html>

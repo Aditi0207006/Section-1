@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistics Dashboard</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+        body{
+            background-color:#eef0fa;
+            padding:50px;
+        }
+
+        .parent{
+            width:80%;
+            margin:auto;
+            background:white;
+            border:4px solid navy;
+            border-radius:20px;
+            padding:40px;
+
+            display:grid;
+
+            grid-template-columns:repeat(3,1fr);
+
+            grid-template-rows:
+            60px
+            80px
+            250px
+            120px;
+
+            gap:30px;
+        }
+
+        .heading{
+            grid-column:1/4;
+            text-align:center;
+            padding-top:15px;
+        }
+
+        .search{
+            grid-column:1/4;
+            border:1px solid gray;
+            border-radius:8px;
+            padding:25px;
+            color:gray;
+        }
+
+        .card{
+            padding:25px;
+            border-radius:10px;
+            border:1px solid lightgray;
+        }
+
+        .card1{
+            background:#dfe0f1;
+        }
+
+        .card2{
+            background:#ead8ea;
+        }
+
+        .card3{
+            background:#f3e1e1;
+        }
+
+        .bottom{
+            padding:10px;
+        }
+
+        h2{
+            color:#222;
+        }
+
+        h3{
+            margin-bottom:20px;
+        }
+
+        p{
+            margin-top:15px;
+            line-height:1.5;
+        }
+
+        button{
+            margin-top:25px;
+            padding:10px 20px;
+            border-radius:20px;
+            border:1px solid gray;
+            background:white;
+        }
+
+        a{
+            color:blue;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="parent">
+
+        <div class="heading">
+            <h2>Search for Statistics</h2>
+        </div>
+
+        <div class="search">
+            🔍 Enter any keyword
+        </div>
+
+        <div class="card card1">
+            <h3>Price Calculator</h3>
+            <p>
+                How much does 1 Eur in 1963 equal
+                in today's prices? Adjust the rent?
+            </p>
+
+            <button>Calculate Price Changes</button>
+        </div>
+
+        <div class="card card2">
+            <h3>Name Statistics</h3>
+            <p>
+                How much does 1 Eur in 1963 equal
+                in today's prices? Adjust the rent?
+            </p>
+
+            <button>Search By Name</button>
+        </div>
+
+        <div class="card card3">
+            <h3>Stats Table</h3>
+            <p>
+                Find detailed tables with time and
+                create your own.
+            </p>
+
+            <button>Go To Tables</button>
+        </div>
+
+        <div class="bottom">
+            <h3>Calendar</h3>
+            <p>See the advance release of calendars in 2021</p>
+            <a href="#">Go to Calendar</a>
+        </div>
+
+        <div class="bottom">
+            <h3>Subscribe to News</h3>
+            <p>Get the latest statistics releases and publications by e-mail</p>
+            <a href="#">Receive e-mail alerts</a>
+        </div>
+
+        <div class="bottom">
+            <h3>API</h3>
+            <p>Easily retrieve and integrate statistics with your own system</p>
+            <a href="#">Open API</a>
+        </div>
+
+    </div>
+
+</body>
+</html>

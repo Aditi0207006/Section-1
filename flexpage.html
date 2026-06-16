@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Page</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body{
+            background:#f5f7fc;
+            min-height:100vh;
+            padding:50px;
+            position:relative;
+            overflow-x:hidden;
+        }
+
+        /* Background circles */
+
+        .circle1,.circle2{
+            position:absolute;
+            border-radius:50%;
+            background:rgba(180,200,255,0.18);
+            z-index:-1;
+        }
+
+        .circle1{
+            width:420px;
+            height:420px;
+            left:-120px;
+            bottom:20px;
+        }
+
+        .circle2{
+            width:520px;
+            height:520px;
+            right:-120px;
+            top:250px;
+        }
+
+        .container{
+            width:90%;
+            max-width:1300px;
+            margin:auto;
+            text-align:center;
+        }
+
+        h1{
+            font-size:50px;
+            color:#1e293b;
+            margin-bottom:25px;
+        }
+
+        .subtitle{
+            width:700px;
+            margin:auto;
+            color:#64748b;
+            line-height:1.6;
+            font-size:18px;
+        }
+
+        /* Toggle */
+
+        .toggle-section{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            gap:15px;
+            margin:45px 0;
+            color:#475569;
+        }
+
+        .toggle{
+            width:55px;
+            height:30px;
+            background:#4361ee;
+            border-radius:20px;
+            position:relative;
+        }
+
+        .toggle::before{
+            content:"";
+            width:22px;
+            height:22px;
+            background:white;
+            border-radius:50%;
+            position:absolute;
+            right:4px;
+            top:4px;
+        }
+
+        /* Pricing Cards */
+
+        .pricing-container{
+            display:flex;
+            justify-content:space-between;
+            align-items:stretch;
+            gap:30px;
+            width:100%;
+        }
+
+        .card{
+            background:white;
+            flex:1;
+            max-width:380px;
+            min-height:560px;
+            padding:35px;
+            border-radius:18px;
+            box-shadow:0 4px 12px rgba(0,0,0,0.05);
+
+            display:flex;
+            flex-direction:column;
+            justify-content:space-between;
+        }
+
+        .card h2{
+            font-size:26px;
+            color:#1e293b;
+            margin-bottom:25px;
+        }
+
+        .price{
+            font-size:58px;
+            font-weight:bold;
+            color:#16213e;
+            margin-bottom:40px;
+        }
+
+        .price span{
+            font-size:20px;
+            font-weight:normal;
+        }
+
+        .dropdown{
+            border:1px solid #dbe2ea;
+            padding:15px;
+            border-radius:8px;
+            text-align:left;
+            margin-bottom:15px;
+            color:#475569;
+        }
+
+        .small-text{
+            font-size:14px;
+            color:#94a3b8;
+            text-align:left;
+            margin-bottom:25px;
+        }
+
+        ul{
+            list-style:none;
+            text-align:left;
+            flex-grow:1;
+        }
+
+        ul li{
+            margin:20px 0;
+            color:#475569;
+            padding-left:18px;
+            position:relative;
+        }
+
+        ul li::before{
+            content:"•";
+            position:absolute;
+            left:0;
+            color:#94a3b8;
+        }
+
+        .tag{
+            border:1px solid #ddd;
+            font-size:10px;
+            padding:4px 7px;
+            border-radius:6px;
+            color:#94a3b8;
+            margin-left:8px;
+        }
+
+        button{
+            width:100%;
+            padding:15px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;
+            font-size:17px;
+            margin-top:30px;
+        }
+
+        .btn-light{
+            background:#f8fafc;
+            border:1px solid #ddd;
+            color:#94a3b8;
+        }
+
+        .btn-blue{
+            background:#4361ee;
+            color:white;
+            box-shadow:0 6px 15px rgba(67,97,238,0.25);
+        }
+
+        .bottom-note{
+            margin-top:30px;
+            display:inline-block;
+            background:white;
+            padding:10px 35px;
+            border-radius:20px;
+            color:#64748b;
+            box-shadow:0 3px 10px rgba(0,0,0,0.04);
+        }
+
+        /* Responsive */
+
+        @media(max-width:1100px){
+
+            .pricing-container{
+                flex-direction:column;
+                align-items:center;
+            }
+
+            .subtitle{
+                width:100%;
+            }
+
+            .card{
+                width:100%;
+                max-width:500px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="circle1"></div>
+    <div class="circle2"></div>
+
+    <div class="container">
+
+        <h1>Choose your plan</h1>
+
+        <p class="subtitle">
+            Be the first to know when boardme launches. Early access users will receive
+            an extended free trial and early bird pricing options.
+        </p>
+
+
+        <!-- Toggle -->
+
+        <div class="toggle-section">
+            <span>Billed monthly</span>
+
+            <div class="toggle"></div>
+
+            <span>Billed annually</span>
+        </div>
+
+
+        <!-- Cards -->
+
+        <div class="pricing-container">
+
+
+            <!-- Free -->
+
+            <div class="card">
+
+                <div>
+
+                    <h2>Free</h2>
+
+                    <div class="price">$0</div>
+
+                    <ul>
+                        <li>500 request</li>
+                        <li>Unlimited projects</li>
+                        <li>Extended free trial <span class="tag">FOR EARLY USERS</span></li>
+                    </ul>
+
+                </div>
+
+                <button class="btn-light">Create Account</button>
+
+            </div>
+
+
+
+            <!-- Standard -->
+
+            <div class="card">
+
+                <div>
+
+                    <h2>Standard</h2>
+
+                    <div class="price">
+                        $99 <span>/ month</span>
+                    </div>
+
+                    <div class="dropdown">
+                        2500 requests ▼
+                    </div>
+
+                    <div class="small-text">
+                        Monthly active users
+                    </div>
+
+                    <ul>
+                        <li>2500 request</li>
+                        <li>Unlimited projects</li>
+                        <li>Extended free trial <span class="tag">FOR EARLY USERS</span></li>
+                    </ul>
+
+                </div>
+
+                <button class="btn-blue">Create Account</button>
+
+            </div>
+
+
+
+            <!-- Enterprise -->
+
+            <div class="card">
+
+                <div>
+
+                    <h2>Enterprise</h2>
+
+                    <div class="price" style="font-size:48px;">
+                        Let’s Talk!
+                    </div>
+
+                    <ul>
+                        <li>500 request</li>
+                        <li>Unlimited projects</li>
+                        <li>Extended free trial <span class="tag">FOR EARLY USERS</span></li>
+                    </ul>
+
+                </div>
+
+                <button class="btn-light">Create Account</button>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="bottom-note">
+            No credit card required
+        </div>
+
+    </div>
+
+</body>
+</html>
