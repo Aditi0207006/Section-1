@@ -1,46 +1,110 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  </head>
-  <body class="bg-blue-100 md:bg-red-100 xl:bg-green-100">
-   <header>
 
-   </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
 
-   <main>
+<body class="md:container md:mx-auto bg-red-100">
 
-      <article>
+  <header class="text-gray-600 body-font">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+      <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
+          stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full"
+          viewBox="0 0 24 24">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+        </svg>
+        <span class="ml-3 text-xl">Tailblocks</span>
+      </a>
+      <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+        <a class="mr-5 hover:text-gray-900">First Link</a>
+        <a class="mr-5 hover:text-gray-900">Second Link</a>
+        <a class="mr-5 hover:text-gray-900">Third Link</a>
+        <a class="mr-5 hover:text-gray-900">Fourth Link</a>
+      </nav>
+      <button
+        class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Button
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+          <path d="M5 12h14M12 5l7 7-7 7"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
 
-        <section class="container mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-2">
-              <div class="space-y-6 my-auto text-center md:text-left">
-                 <h1 class="text-6xl  font-semibold">Hero Section Title <br> Should be Here</h1>
-                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur id, eum totam, rerum labore perferendis repudiandae neque iste nisi consequatur inventore iusto hic commodi amet!</p>
-                 <div class="flex gap-4 justify-center md:justify-start">
-                     <button class="bg-linear-to-br from-blue-500 to-purple-600 text-white px-4 py-2 rounded-lg hover:scale-90 duration-300">  Get Started </button>
-                     <button class="bg-white border px-4 py-2 rounded-lg hover:scale-90 duration-300">Explore</button>
-                 </div> 
-             </div>
-           
-                
-             <div> 
-                 <img src="heroimage.svg" alt="">    
-             </div>
-         </div>
 
-           
-        </section>
+  <main>
 
-      </article>
+    <article>
 
-   </main>
+      <section class="px-5 md:px-0 container mx-auto ">
+        <div class="grid grid-cols-1 md:grid-cols-2 px-10">
+          <div class="space-y-6 my-auto text-center md:text-left">
+            <h1 class="md:text-6xl text-3xl font-semibold">Hero Section Title Should be Here</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur id, eum totam, rerum labore perferendis
+              repudiandae neque iste nisi consequatur inventore iusto hic commodi amet!</p>
+            <div class="flex gap-4 justify-center md:justify-start">
+              <button
+                class="bg-linear-to-br from-blue-500 to-purple-600 text-white px-4 py-2 rounded-lg hover:scale-90 duration-300">
+                Get Started </button>
+              <button class="bg-white border px-4 py-2 rounded-lg hover:scale-90 duration-300">Explore</button>
+            </div>
+          </div>
 
-   <footer>
-     
-   </footer>
 
-  </body>
+          <div class="order-first md:order-last">
+            <img src="heroimage.svg" alt="">
+          </div>
+        </div>
+
+
+      </section>
+
+    </article>
+
+    <article>
+
+      <section class="px-5 md:px-0 container mx-auto">
+        <h2 class="text-4xl text-semibold text-center">Our Features</h2>
+        <div class="mt-10 grid grid-cols-3 px-10 gap-8">
+          <div class="bg-white p-8 space-y-4 rounded-xl shadow-lg text-center hover:scale-110 duration-300">
+            <i class="fa-regular fa-cloud fa-3x"></i>
+            <h3 class="text-2xl font-semibold ">Card Title 1</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur id, eum totam, rerum labore perferendis
+              repudiandae neque iste nisi consequatur inventore iusto hic commodi amet!</p>
+            <button class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-violet-600">View Details</button>
+          </div>
+          <div class="bg-white p-8 space-y-4 rounded-xl shadow-lg text-center hover:scale-110 duration-300">
+            <i class="fa-regular fa-cloud fa-3x"></i>
+            <h3 class="text-2xl font-semibold ">Card Title 1</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur id, eum totam, rerum labore perferendis
+              repudiandae neque iste nisi consequatur inventore iusto hic commodi amet!</p>
+            <button class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-violet-600">View Details</button>
+          </div>
+          <div class="bg-white p-8 space-y-4 rounded-xl shadow-lg text-center hover:scale-110 duration-300">
+            <i class="fa-regular fa-cloud fa-3x"></i>
+            <h3 class="text-2xl font-semibold ">Card Title 1</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur id, eum totam, rerum labore perferendis
+              repudiandae neque iste nisi consequatur inventore iusto hic commodi amet!</p>
+            <button class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-violet-600">View Details</button>
+          </div>
+        </div>
+
+      </section>
+    </article>
+
+  </main>
+
+  <footer>
+
+  </footer>
+
+</body>
+
 </html>
