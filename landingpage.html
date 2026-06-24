@@ -10,7 +10,7 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body class="md:container md:mx-auto bg-red-100">
+<body class="md:container md:mx-auto bg-linear-to-tl from-blue-200 to-purple-200">
 
   <header class="text-gray-600 body-font">
     <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
@@ -46,7 +46,7 @@
       <section class="px-5 md:px-0 container mx-auto ">
         <div class="grid grid-cols-1 md:grid-cols-2 px-10">
           <div class="space-y-6 my-auto text-center md:text-left">
-            <h1 class="md:text-6xl text-3xl font-semibold">Hero Section Title Should be Here</h1>
+            <h1 class="md:text-7xl text-3xl font-semibold">Hero Section Title Should be Here</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur id, eum totam, rerum labore perferendis
               repudiandae neque iste nisi consequatur inventore iusto hic commodi amet!</p>
             <div class="flex gap-4 justify-center md:justify-start">
@@ -70,7 +70,7 @@
 
     <article>
 
-      <section class="px-5 md:px-0 container mx-auto">
+      <section class="px-5 md:px-0 container mx-auto mt-20">
         <h2 class="text-4xl text-semibold text-center">Our Features</h2>
         <div class="mt-10 grid grid-cols-3 px-10 gap-8">
           <div class="bg-white p-8 space-y-4 rounded-xl shadow-lg text-center hover:scale-110 duration-300">
@@ -94,6 +94,39 @@
               repudiandae neque iste nisi consequatur inventore iusto hic commodi amet!</p>
             <button class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-violet-600">View Details</button>
           </div>
+        </div>
+
+      </section>
+      <section class="px-5 md:px-0 container mx-auto mt-20">
+
+        <h2 class="text-4xl text-semibold text-center">Search Engine</h2>
+
+        <div class="flex justify centre mt-5 gap-4 w-1/2 mx-auto">
+          <div class="relative flex-grow">
+
+            <input type="text" class="border p-4 pl-10 w-full rounded-2xl mt-auto"
+              placeholder="Search for something...">
+            <i class="absolute left-3 top-1/2 transform -translate-y-1/2 fa-solid fa-magnifying-glass"></i>
+
+
+          </div>
+
+          <button
+            class="bg-linear-to-br from-blue-500 to-purple-600 text-white px-4 py-2 rounded-lg hover:scale-90 duration-300">
+            Search
+          </button>
+
+        </div>
+
+        <div class="grid grid-cols-3 gap-4 mt-10 px-10">
+          <div>
+              <img src="secondimage.svg" alt="">
+          </div>
+
+          <div>
+
+          </div>
+
         </div>
 
       </section>
