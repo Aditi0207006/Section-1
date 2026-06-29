@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modern Search Page</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    min-height:100vh;
+    padding:40px 80px;
+    background: linear-gradient(135deg, #6a85f1, #8d6ae3);
+    color:white;
+}
+
+
+/* Heading */
+
+.heading{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.heading h1{
+    font-size:50px;
+    margin-bottom:8px;
+}
+
+.heading p{
+    color:#ececec;
+    font-size:18px;
+}
+
+
+/* Search bar BELOW heading */
+
+.search-container{
+    display:flex;
+    justify-content:center;
+    margin-bottom:60px;
+}
+
+.search-box{
+    width:650px;
+    background: rgba(255,255,255,0.18);
+    backdrop-filter: blur(12px);
+    border-radius:40px;
+    padding:15px 20px;
+    display:flex;
+    align-items:center;
+    box-shadow:0 5px 20px rgba(0,0,0,0.2);
+}
+
+.search-box input{
+    flex:1;
+    border:none;
+    outline:none;
+    background:transparent;
+    padding-left:10px;
+    color:white;
+    font-size:17px;
+}
+
+.search-box input::placeholder{
+    color:#ddd;
+}
+
+
+/* Main Grid */
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:70px;
+    align-items:center;
+}
+
+
+/* Left image */
+
+.left img{
+    width:100%;
+    max-width:500px;
+    border-radius:30px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+
+
+/* Right side */
+
+.right{
+    background: rgba(255,255,255,0.12);
+    padding:35px;
+    border-radius:20px;
+    backdrop-filter: blur(15px);
+}
+
+.right h2{
+    font-size:35px;
+    margin-bottom:30px;
+}
+
+.feature{
+    display:flex;
+    gap:18px;
+    margin-bottom:28px;
+    align-items:flex-start;
+}
+
+.icon{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    background:white;
+    color:#6a85f1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:22px;
+    font-weight:bold;
+}
+
+.feature-text h3{
+    margin-bottom:5px;
+    font-size:20px;
+}
+
+.feature-text p{
+    color:#eee;
+    line-height:1.5;
+}
+
+
+/* Mobile */
+
+@media(max-width:900px){
+
+.container{
+    grid-template-columns:1fr;
+    text-align:center;
+}
+
+.feature{
+    justify-content:center;
+}
+
+body{
+    padding:30px;
+}
+
+.search-box{
+    width:100%;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!-- Heading -->
+
+<div class="heading">
+    <h1>Search Beyond Limits</h1>
+    <p>Discover information beautifully and instantly</p>
+</div>
+
+
+<!-- Search Bar -->
+
+<div class="search-container">
+    <div class="search-box">
+        🔍
+        <input type="text" placeholder="Search anything here...">
+    </div>
+</div>
+
+
+<!-- Main Grid -->
+
+<div class="container">
+
+    <!-- LEFT IMAGE -->
+
+    <div class="left">
+        <!-- Replace with your own image -->
+        <img src="your-image.jpg" alt="image">
+    </div>
+
+
+    <!-- RIGHT CONTENT -->
+
+    <div class="right">
+
+        <h2>Why Use Our Search Platform?</h2>
+
+        <div class="feature">
+            <div class="icon">⚡</div>
+            <div class="feature-text">
+                <h3>Fast Results</h3>
+                <p>Get instant access to information from multiple sources quickly.</p>
+            </div>
+        </div>
+
+        <div class="feature">
+            <div class="icon">🎯</div>
+            <div class="feature-text">
+                <h3>Accurate Search</h3>
+                <p>Smart algorithms help you find exactly what you are looking for.</p>
+            </div>
+        </div>
+
+        <div class="feature">
+            <div class="icon">🌍</div>
+            <div class="feature-text">
+                <h3>Global Access</h3>
+                <p>Search across worldwide knowledge and discover endless possibilities.</p>
+            </div>
+        </div>
+
+        <div class="feature">
+            <div class="icon">📚</div>
+            <div class="feature-text">
+                <h3>Unlimited Resources</h3>
+                <p>Millions of articles, guides, and knowledge available in one place.</p>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
