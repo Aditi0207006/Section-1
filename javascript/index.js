@@ -12,3 +12,5 @@ console.log(typeof myname);
 isHungry = true;
 console.log(isHungry);
 console.log(typeof isHungry);
+
+empty = null;
