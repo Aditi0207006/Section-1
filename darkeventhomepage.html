@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Evara | Crafting Unforgettable Moments</title>
+    <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Material Symbols -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed-variant": "#444655",
+                        "surface-dim": "#131313",
+                        "surface-container-highest": "#353534",
+                        "on-surface": "#e5e2e1",
+                        "secondary": "#c5c5d8",
+                        "surface-container-low": "#1c1b1b",
+                        "surface-container-high": "#2a2a2a",
+                        "surface-container": "#201f1f",
+                        "tertiary-fixed-dim": "#e2b6ff",
+                        "background": "#131313",
+                        "tertiary": "#fef3ff",
+                        "on-error": "#690005",
+                        "on-primary-container": "#705e00",
+                        "on-tertiary-fixed-variant": "#612e87",
+                        "on-secondary-fixed": "#191b29",
+                        "secondary-fixed": "#e1e1f5",
+                        "surface-bright": "#393939",
+                        "secondary-container": "#464858",
+                        "error": "#ffb4ab",
+                        "on-secondary-container": "#b6b7ca",
+                        "on-surface-variant": "#d0c6ab",
+                        "primary": "#fff6df",
+                        "on-tertiary-fixed": "#2e004d",
+                        "inverse-primary": "#705d00",
+                        "secondary-fixed-dim": "#c5c5d8",
+                        "on-primary": "#3a3000",
+                        "outline-variant": "#4d4732",
+                        "outline": "#999077",
+                        "tertiary-container": "#eecfff",
+                        "on-tertiary": "#49126e",
+                        "on-tertiary-container": "#7c48a1",
+                        "inverse-surface": "#e5e2e1",
+                        "primary-fixed": "#ffe16d",
+                        "tertiary-fixed": "#f3daff",
+                        "primary-container": "#ffd700",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-background": "#e5e2e1",
+                        "surface-tint": "#e9c400",
+                        "on-error-container": "#ffdad6",
+                        "primary-fixed-dim": "#e9c400",
+                        "error-container": "#93000a",
+                        "on-secondary": "#2e2f3e",
+                        "inverse-on-surface": "#313030",
+                        "surface": "#131313",
+                        "on-primary-fixed-variant": "#544600",
+                        "surface-variant": "#353534",
+                        "on-primary-fixed": "#221b00"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "base": "8px",
+                        "lg": "48px",
+                        "margin-desktop": "64px",
+                        "margin-mobile": "16px",
+                        "xs": "4px",
+                        "gutter": "24px",
+                        "xl": "80px",
+                        "sm": "12px",
+                        "md": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Playfair Display"],
+                        "display-md": ["Playfair Display"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "label-md": ["Plus Jakarta Sans"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"],
+                        "label-lg": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "display-md": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "label-md": ["12px", { "lineHeight": "1.2", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "display-lg": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-lg": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600" }]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+
+        .glass-card {
+            background: rgba(197, 197, 216, 0.1);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(197, 197, 216, 0.15);
+        }
+
+        .text-glow-gold {
+            text-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #131313;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #c5c5d8;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #ffd700;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background text-on-surface font-body-md overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container">
+    <!-- TopAppBar -->
+    <header
+        class="bg-surface/90 backdrop-blur-md dark:bg-surface/90 fixed top-0 w-full z-50 border-b border-outline-variant/20 shadow-sm">
+        <nav class="flex justify-between items-center px-6 md:px-margin-desktop py-4 max-w-[1440px] mx-auto">
+            <div class="font-display-md text-headline-md tracking-tight text-primary-fixed dark:text-primary-fixed-dim">
+                Evara
+            </div>
+            <div class="hidden md:flex items-center gap-8">
+                <a class="font-label-lg text-label-lg text-primary-fixed font-bold border-b-2 border-primary-fixed pb-1"
+                    href="#">Home</a>
+                <a class="font-label-lg text-label-lg text-on-surface-variant dark:text-on-surface-variant hover:text-primary-fixed transition-colors"
+                    href="#">Weddings</a>
+                <a class="font-label-lg text-label-lg text-on-surface-variant dark:text-on-surface-variant hover:text-primary-fixed transition-colors"
+                    href="#">Corporate</a>
+                <a class="font-label-lg text-label-lg text-on-surface-variant dark:text-on-surface-variant hover:text-primary-fixed transition-colors"
+                    href="#">Galas</a>
+                <a class="font-label-lg text-label-lg text-on-surface-variant dark:text-on-surface-variant hover:text-primary-fixed transition-colors"
+                    href="#">Portfolio</a>
+            </div>
+            <button
+                class="bg-primary-container text-on-primary-container px-6 py-2 rounded-full font-label-lg text-label-lg hover:scale-105 transition-transform duration-200">
+                Inquire Now
+            </button>
+        </nav>
+    </header>
+    <main>
+        <!-- Hero Section -->
+        <section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+            <div
+                class="relative z-10 px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8 animate-fade-in">
+                    <h1 class="font-display-lg text-display-lg md:text-display-lg leading-tight text-primary">
+                        Crafting <span class="text-primary-fixed text-glow-gold">Unforgettable</span> Moments
+                    </h1>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+                        From high-stakes corporate summits to ethereal luxury weddings, Evara blends meticulous
+                        organization with exuberant elegance to produce events that resonate forever.
+                    </p>
+                    <div class="flex flex-wrap gap-4 pt-4">
+                        <button
+                            class="bg-primary-container text-on-primary-container px-8 py-4 rounded-full font-label-lg text-label-lg font-bold hover:scale-105 transition-all shadow-lg shadow-primary-container/20">
+                            Book a Consultation
+                        </button>
+                        <button
+                            class="border border-secondary-fixed-dim text-secondary-fixed-dim px-8 py-4 rounded-full font-label-lg text-label-lg font-bold hover:bg-secondary-container transition-all">
+                            View Portfolio
+                        </button>
+                    </div>
+                </div>
+                <div class="hidden md:block relative">
+                    <div
+                        class="aspect-square rounded-3xl overflow-hidden border border-outline-variant/30 shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-700">
+                        <div class="w-full h-full bg-cover bg-center"
+                            data-alt="A luxurious evening gala ballroom setting with high ceilings, massive crystal chandeliers, and long tables decorated with white orchids and gold accents. The lighting is deep lavender and golden yellow, creating a sophisticated and exuberant atmosphere."
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAo8Ly5J7l2ZBF5c7jAZ3WqQbMvaveoApcaWYgHbShd_IqxT1-Xeat1pVUsXtlZIsB5F4zRftkDWzporPpnfOrZhmo2Iy7Ou4N56zqkGdqDHEVfrSP_LpdCkhzQBWDR8qj4n-mCkJH4k6YvQ25WnmkLbx7XjN3y9y428_Ds8Vu3HpPDCSzr_UVZAQDBSyv8yWe8gJVT_aH-aNOQMJP-2ryf4msXIm7SiRoiNnEUv6arGJYKekLzd548qeM_Lb1WWLny4KnhnSFLqoIR')">
+                        </div>
+                    </div>
+                    <div
+                        class="absolute -bottom-10 -left-10 bg-surface-container-high p-8 rounded-2xl glass-card border-l-4 border-primary-fixed shadow-xl max-w-xs animate-bounce-slow">
+                        <span class="material-symbols-outlined text-primary-fixed text-4xl mb-2"
+                            data-icon="auto_awesome"></span>
+                        <p class="font-headline-md text-headline-md text-primary-fixed-dim">150+ Events</p>
+                        <p class="text-on-surface-variant font-label-md">Planned to Perfection this year.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Types of Events -->
+        <section class="py-xl bg-surface-container-lowest">
+            <div class="px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="font-display-md text-display-md text-primary mb-4">Event Specialties</h2>
+                    <div class="h-1 w-24 bg-primary-container mx-auto rounded-full"></div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+                    <!-- Wedding Card -->
+                    <div
+                        class="group relative aspect-[3/4] rounded-2xl overflow-hidden cursor-pointer hover:shadow-2xl transition-all duration-500">
+                        <div class="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-700"
+                            data-alt="A cinematic outdoor luxury wedding ceremony at sunset."
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBZQDa4ZF--A_CR1SacPadbzXgAAJzLrkKi7cxCTCRJh2z0CSC12dRF3-Fxf1MMTlOCAo5TwbUbiJNUr-gKmnmqLGs92-_myMtrpBq5QKBQljpay-ajCIfIrTzLV7MgpiI5R3ef5YvGgFDHNFduOPn76fbhuOryjt090wV44luM7SakekvSArRgMoXkhhM2qIyEEklcHOQdjbttAHcpIqS32RwtrG-T_RZaNOGTiO-grolOZBJIae-mtRhrgrFhQixYmwzTTxQU7srK')">
+                        </div>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-80">
+                        </div>
+                        <div
+                            class="absolute bottom-0 p-8 w-full backdrop-blur-md bg-secondary-fixed/10 translate-y-4 group-hover:translate-y-0 transition-transform">
+                            <h3 class="font-headline-md text-headline-md text-primary-fixed">Weddings</h3>
+                            <p
+                                class="text-on-surface-variant font-label-md mt-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                                Ethereal celebrations for lifelong memories.</p>
+                        </div>
+                    </div>
+                    <!-- Corporate Card -->
+                    <div
+                        class="group relative aspect-[3/4] rounded-2xl overflow-hidden cursor-pointer hover:shadow-2xl transition-all duration-500">
+                        <div class="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-700"
+                            data-alt="A modern tech conference stage with high-contrast electric blue and neon yellow lighting."
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBm2wymYQGtNonUDqR1shY5KDQWTe6TBZsd7Nn-TLls2WxOiFOxOvdwpxoBGnKd0I5N2K7kCSX2q9K0z82Brv6DSIBHHOrYbl8bz_Ioj9ndS7w3wK1pFKTxYRsy12pPXpI77JlS1E3LNa3QO3ZdjRtjpFzcqcbpML2nTAQ3bnk1bU9xm1KCbEAbC3XVmkrNqLEmhQYmJUcNuz41rJPTdP5lVU0n2QaMr21LhqqXTPWnQ1GP8Zl19KnYE9fCtFH4nN5gDP13ARvwWoDO')">
+                        </div>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-80">
+                        </div>
+                        <div
+                            class="absolute bottom-0 p-8 w-full backdrop-blur-md bg-secondary-fixed/10 translate-y-4 group-hover:translate-y-0 transition-transform">
+                            <h3 class="font-headline-md text-headline-md text-primary-fixed">Corporate</h3>
+                            <p
+                                class="text-on-surface-variant font-label-md mt-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                                Impactful summits and brand launches.</p>
+                        </div>
+                    </div>
+                    <!-- Private Parties Card -->
+                    <div
+                        class="group relative aspect-[3/4] rounded-2xl overflow-hidden cursor-pointer hover:shadow-2xl transition-all duration-500">
+                        <div class="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-700"
+                            data-alt="A high-end private birthday party on a luxury rooftop with lavender lighting."
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuALnH0OQexpIwwHmHVyOJlGesHTw8xOPySIp2WJOWfcQqwMoMETpEWXnscoMSDOl3WmEuhbug23pq631t4ipY8cifananRRJNrb75mGdIiYYSefYrrKo7kcOPsJLIuHtU39krwrsT5WIm9hVgqG1roXh4yu6JNtSKIBnlYsQRAdBdve8lWdyACSMXQKSx4HtGD5VFH2SA91t1frxB1kKC14J9PBdj9zIYZVrL4xJVoj7INE4MgJhfK0oeTafEvy-qaQp0EUbjxNJQZo')">
+                        </div>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-80">
+                        </div>
+                        <div
+                            class="absolute bottom-0 p-8 w-full backdrop-blur-md bg-secondary-fixed/10 translate-y-4 group-hover:translate-y-0 transition-transform">
+                            <h3 class="font-headline-md text-headline-md text-primary-fixed">Private Parties</h3>
+                            <p
+                                class="text-on-surface-variant font-label-md mt-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                                Intimate, high-energy bespoke gatherings.</p>
+                        </div>
+                    </div>
+                    <!-- Gala Card -->
+                    <div
+                        class="group relative aspect-[3/4] rounded-2xl overflow-hidden cursor-pointer hover:shadow-2xl transition-all duration-500">
+                        <div class="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-700"
+                            data-alt="A grand charity gala featuring a red carpet entrance with gold stanchions."
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDEiabuZ1f3Tz5PyvP9V8OTr6gUrvRWXijnH1666AWHI5nTlbFNflH0128eUx3MV1boXaSH0kgyT8wXZ5E7YdRm0rtUV-91QKNtHNJuhUE7DJQvnN8C8J9gXbQaPp7UdiohHJ7tUHwR0dgcCdBFZ_KpCr3PFFhHxv6SVnRmwSGpTkzGRRzh6NYN4T8LygG-6izxqOd2kL87NqmX88P88XL73Lc_6JLW2ivroHVcBMD3Ej8PVE-Uf7PVMy8gq4OJd-LNVA8kZM_NsAlv')">
+                        </div>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-80">
+                        </div>
+                        <div
+                            class="absolute bottom-0 p-8 w-full backdrop-blur-md bg-secondary-fixed/10 translate-y-4 group-hover:translate-y-0 transition-transform">
+                            <h3 class="font-headline-md text-headline-md text-primary-fixed">Galas</h3>
+                            <p
+                                class="text-on-surface-variant font-label-md mt-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                                Prestigious charity and red carpet events.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Services -->
+        <section class="py-xl bg-surface relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-1/3 h-full opacity-10 pointer-events-none"></div>
+            <div class="px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+                    <div class="max-w-2xl">
+                        <span class="text-primary-fixed font-label-lg tracking-widest uppercase">Our Expertise</span>
+                        <h2 class="font-display-md text-display-md text-primary mt-4">Comprehensive Event Design</h2>
+                    </div>
+                    <button
+                        class="flex items-center gap-2 text-primary-fixed font-label-lg hover:underline underline-offset-8">
+                        Explore Full Services <span class="material-symbols-outlined">arrow_forward</span>
+                    </button>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div
+                        class="p-10 rounded-3xl bg-surface-container-low border border-outline-variant/10 hover:border-primary-fixed/30 transition-all group">
+                        <span class="material-symbols-outlined text-5xl text-primary-fixed mb-6 block"
+                            data-icon="event_note"></span>
+                        <h3 class="font-headline-md text-headline-md text-primary mb-4">Full-Service Planning</h3>
+                        <p class="text-on-surface-variant font-body-md leading-relaxed">
+                            From initial concept and mood-boarding to on-site coordination and vendor logistics. We
+                            handle the complexity so you can enjoy the moment.
+                        </p>
+                    </div>
+                    <div
+                        class="p-10 rounded-3xl bg-surface-container-low border border-outline-variant/10 hover:border-primary-fixed/30 transition-all group">
+                        <span class="material-symbols-outlined text-5xl text-primary-fixed mb-6 block"
+                            data-icon="restaurant"></span>
+                        <h3 class="font-headline-md text-headline-md text-primary mb-4">Catering Excellence</h3>
+                        <p class="text-on-surface-variant font-body-md leading-relaxed">
+                            Bespoke menus crafted by Michelin-trained chefs. We curate culinary experiences that reflect
+                            your brand or personal taste with flair.
+                        </p>
+                    </div>
+                    <div
+                        class="p-10 rounded-3xl bg-surface-container-low border border-outline-variant/10 hover:border-primary-fixed/30 transition-all group">
+                        <span class="material-symbols-outlined text-5xl text-primary-fixed mb-6 block"
+                            data-icon="palette"></span>
+                        <h3 class="font-headline-md text-headline-md text-primary mb-4">Floral &amp; Decor</h3>
+                        <p class="text-on-surface-variant font-body-md leading-relaxed">
+                            Transformative spatial design using seasonal blooms, custom furniture, and atmospheric
+                            lighting to create an immersive world.
+                        </p>
+                    </div>
+                    <div
+                        class="p-10 rounded-3xl bg-surface-container-low border border-outline-variant/10 hover:border-primary-fixed/30 transition-all group">
+                        <span class="material-symbols-outlined text-5xl text-primary-fixed mb-6 block"
+                            data-icon="location_on"></span>
+                        <h3 class="font-headline-md text-headline-md text-primary mb-4">Venue Selection</h3>
+                        <p class="text-on-surface-variant font-body-md leading-relaxed">
+                            Exclusive access to heritage estates, modern lofts, and secret gardens. We find the perfect
+                            canvas for your unique vision.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Gallery (Bento Layout) -->
+        <section class="py-xl bg-surface-container-lowest">
+            <div class="px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="font-display-md text-display-md text-primary">The Evara Gallery</h2>
+                    <p class="text-on-surface-variant mt-4 font-label-lg">A glimpse into our curated worlds of
+                        celebration.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-4 h-[800px]">
+                    <div class="md:col-span-2 md:row-span-2 relative rounded-3xl overflow-hidden group">
+                        <div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-1000"
+                            data-alt="Outdoor wedding banquet under fairy lights."
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAhhZanhUGuR1TCXSPclxmKLvYGviIS59DUJaoUnrOoq02nRLMSbmGXrK2LLnjC9i91DAkrZZ5kYvW0Zluqj3khRPRDPl3yMJwvWbtf5Llaazu1nVjl_kF41AKtBbw5IvePTgcviU6OlB7yekznSTMQgklSq781Z-rPZvS7Khkc47csT9xnjbYHhNoqkD72btDO58YaqQstXJBbpVrFEw9R4K5G1T4ZY9yZPKJBIzSRkWtoJxmGSNktehm9imG5oOcz1pST_vhXqIaG')">
+                        </div>
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-all"></div>
+                    </div>
+                    <div class="md:col-span-1 md:row-span-1 relative rounded-3xl overflow-hidden group">
+                        <div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-1000"
+                            data-alt="High-end catering hors d'oeuvres."
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBGWsC4TjttJrqALNfcLfQu_dQrGq5tl-nblXXLSfq_emJJOJAAtPy0DQF9GGDwQcOnLGFaDxJ23tia-8nx_nYrkm23NWleHr2LGpAB3S6o992dj4VzDxtev2xFvkp8jYzkbV2v-qjkl6ednLo-lQr1wTI-XU3icflsUYuSnA41lf259DL-P-wL-157bkacKaL0xRTvdeG_MdQZy50DqCfjdGO7z_wlQbhGNF3h-zFOvHgfqSfKtqsG9X-4aDfa0rme8v788_MGsnCQ')">
+                        </div>
+                    </div>
+                    <div class="md:col-span-1 md:row-span-2 relative rounded-3xl overflow-hidden group">
+                        <div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-1000"
+                            data-alt="Model in couture gown on a lavender lit runway."
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCRTvXlxggd9HVWZhbXOB7Wb7ppbeL_6rkTi8honCwnxP6Gacc72h-QDFyltp7ePLOK98c6_bft-qMfEl0MZq07FV-wN367M_WwNJRYHYQnyaVu0rkfXJpjnHipJy1lU6kSvlLJKScVvqpi47eU9OdFZT8OS-dLyg5qLnnKEbUpo2Lpf433zmYtU1K29TROZXlj2JsyAYN-wF2aQwO9Ew0W6hXfCqXzboduG1a15pqkiZYlo0tTJWSRPzUZ3mwLeHVPPIdqFFLudLQk')">
+                        </div>
+                    </div>
+                    <div class="md:col-span-1 md:row-span-1 relative rounded-3xl overflow-hidden group">
+                        <div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-1000"
+                            data-alt="Modern corporate lounge with lavender velvet sofas."
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA_Lx5rlLQbRRVQejMy-er-S8PwxSylyBADDP5HDWShLrKPNjQuwJE47O5HQc-MBsXr2jHdDOi6NiStfvcbOdGm-TaUDrJj2F9hNl36Y_VdXeNd_BPecm3geVBr-gjTGuwL07SEj6CgqDxAmSnnMv1VkSkxI8GP4aLzjCbK752AVTmP_QN9v-SyyrEFP21LCQMkxedOYrKvxkWH3sPpa-ImU9KB38_Aa4GG8DhaHCyooEVZFP6uWx2azM2L9wdEldcticYS_Vq_bdW-')">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Testimonials -->
+        <section class="py-xl bg-surface relative">
+            <div class="px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto overflow-hidden">
+                <div class="flex items-center gap-8 mb-16">
+                    <h2 class="font-display-md text-display-md text-primary shrink-0">Client Stories</h2>
+                    <div class="h-px bg-outline-variant w-full"></div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+                    <div class="glass-card p-10 rounded-3xl relative">
+                        <span class="text-primary-fixed text-6xl font-serif absolute top-4 right-8 opacity-20">“</span>
+                        <p class="font-body-lg text-body-lg text-on-surface mb-8 italic">
+                            "Evara turned our corporate summit into a cultural milestone. The attention to detail in the
+                            lighting and flow was unlike anything we've experienced."
+                        </p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-14 h-14 rounded-full overflow-hidden border-2 border-primary-fixed">
+                                <div class="w-full h-full bg-cover bg-center" data-alt="Portrait of Sarah Jenkins."
+                                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAZSlMMi_QmO6rQ253wbYeVHBAMNSnQMWW6d39SqBCooohcPR5gpH3uLpptfqH_cfMW2wFUKLJ3TyMhplICWvwWZES8bCb3VqN_YecuMJXlnps6XHoRTuzLvTScG2bCqlg63IX2FMUshc8RAN6xgjs0MVgSefAKUnqOYBgtKiUg1pUdAWsCvJboAaSbk-hfyO79e74rnlsTpRA8YFNaTTndhidfIfkN9BD_daIOL3i0Dh0QqZe4B5x5QP1UwZG2AZXUWAgU3rUndQKD')">
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-label-lg text-primary-fixed">Sarah Jenkins</h4>
+                                <p class="text-on-surface-variant text-label-md">VP, TechGlobal</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-secondary-container/10 p-10 rounded-3xl relative border border-primary-fixed/20 scale-105 z-10 backdrop-blur-sm">
+                        <span class="text-primary-fixed text-6xl font-serif absolute top-4 right-8 opacity-20">“</span>
+                        <p class="font-body-lg text-body-lg text-on-surface mb-8 italic">
+                            "Our wedding was ethereal. Evara captured our personalities and amplified them through
+                            floral design and a venue that felt like a dream."
+                        </p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-14 h-14 rounded-full overflow-hidden border-2 border-primary-fixed">
+                                <div class="w-full h-full bg-cover bg-center" data-alt="The Hendersons."
+                                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDnJneccYq2z5vSGzXcJiQo3yI0oAdg1nRyxyUkjBks832xK5SPMw8md6xisarRsqxFqsWgQEcowKIuzoisNhoJ0lj22Ne85zCNfTsI_FlQnQW7IC6UmzcTEwP01N2SF02DF52FmTPhLKBNtujxQxFIaPzMgq9r3ASGKt_YyXaNnDE6jfBFcdgrOjoSOjWkt7--q96VsHcvUcIHbnRs_OgboW5QIJqzYC87MNWpYUiACbOXz24em2LVJ0aq2XpjfZAcx8gQL7X6o0Z5')">
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-label-lg text-primary-fixed">The Hendersons</h4>
+                                <p class="text-on-surface-variant text-label-md">Private Client</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="glass-card p-10 rounded-3xl relative">
+                        <span class="text-primary-fixed text-6xl font-serif absolute top-4 right-8 opacity-20">“</span>
+                        <p class="font-body-lg text-body-lg text-on-surface mb-8 italic">
+                            "The Gala was a masterclass in logistics and luxury. Not a single detail was missed, and the
+                            fundraising targets were shattered."
+                        </p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-14 h-14 rounded-full overflow-hidden border-2 border-primary-fixed">
+                                <div class="w-full h-full bg-cover bg-center" data-alt="Portrait of David Arquette."
+                                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDeTgaCJnpE_FtyhEiYmAcBuErpjhWKNUJYwrLJzoOonemqcq2RsuYqBtkGSgE4hCN4OoDty1P8edoWGH70Rm5E6Ho0fIAC7uvxf5E1Sq7TzRhdjMGSZ6s6Nk3be88J4YY6IAS0TJkedTjOlSIouiECYZf4yxjIGPHq-EsSvRYY65Cc-WlJ6SE88nDt9m4DvEKGKV6_PGZOalMJ66HfYPcXWX4nWKxBkP7LZnbywQB0nRAnuafIXCJ-WNrGsRRhSL1OTzLrsNzR1wDn')">
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-label-lg text-primary-fixed">David Arquette</h4>
+                                <p class="text-on-surface-variant text-label-md">Director, CharityFirst</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Us -->
+        <section class="py-xl bg-surface-container-lowest">
+            <div class="px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto">
+                <div
+                    class="bg-surface-container-low rounded-[40px] overflow-hidden border border-outline-variant/10 shadow-2xl flex flex-col lg:flex-row">
+                    <!-- Form Side -->
+                    <div class="lg:w-1/2 p-12 md:p-16">
+                        <h2 class="font-display-md text-display-md text-primary mb-2">Let's Connect</h2>
+                        <p class="text-on-surface-variant mb-10">Tell us about your vision, and we'll bring it to life.
+                        </p>
+                        <form class="space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="space-y-2">
+                                    <label class="text-label-md text-primary-fixed-dim">Full Name</label>
+                                    <input
+                                        class="w-full bg-background border border-outline-variant rounded-xl p-4 focus:border-primary-fixed focus:ring-1 focus:ring-primary-fixed outline-none text-on-surface"
+                                        placeholder="John Doe" type="text" />
+                                </div>
+                                <div class="space-y-2">
+                                    <label class="text-label-md text-primary-fixed-dim">Email Address</label>
+                                    <input
+                                        class="w-full bg-background border border-outline-variant rounded-xl p-4 focus:border-primary-fixed focus:ring-1 focus:ring-primary-fixed outline-none text-on-surface"
+                                        placeholder="john@example.com" type="email" />
+                                </div>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-label-md text-primary-fixed-dim">Event Type</label>
+                                <select
+                                    class="w-full bg-background border border-outline-variant rounded-xl p-4 focus:border-primary-fixed outline-none text-on-surface appearance-none">
+                                    <option>Wedding</option>
+                                    <option>Corporate Gala</option>
+                                    <option>Brand Launch</option>
+                                    <option>Private Celebration</option>
+                                </select>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-label-md text-primary-fixed-dim">Your Message</label>
+                                <textarea
+                                    class="w-full bg-background border border-outline-variant rounded-xl p-4 focus:border-primary-fixed focus:ring-1 focus:ring-primary-fixed outline-none text-on-surface"
+                                    placeholder="Tell us more about your dream event..." rows="4"></textarea>
+                            </div>
+                            <button
+                                class="w-full bg-primary-container text-on-primary-container font-bold py-4 rounded-xl hover:bg-primary-fixed transition-colors text-lg">
+                                Send Inquiry
+                            </button>
+                        </form>
+                    </div>
+                    <!-- Info Side -->
+                    <div
+                        class="lg:w-1/2 bg-secondary-fixed p-12 md:p-16 flex flex-col justify-between relative overflow-hidden">
+                        <div class="relative z-10">
+                            <h3 class="font-headline-md text-headline-md text-on-secondary-fixed mb-8">Evara Studio</h3>
+                            <div class="space-y-8">
+                                <div class="flex items-start gap-4">
+                                    <span class="material-symbols-outlined text-on-secondary-fixed-variant text-2xl"
+                                        data-icon="location_on"></span>
+                                    <p class="text-on-secondary-fixed-variant">1224 Event Horizon Way,<br />Suite 500,
+                                        London, UK</p>
+                                </div>
+                                <div class="flex items-start gap-4">
+                                    <span class="material-symbols-outlined text-on-secondary-fixed-variant text-2xl"
+                                        data-icon="call"></span>
+                                    <p class="text-on-secondary-fixed-variant">+44 (0) 20 7946 0123</p>
+                                </div>
+                                <div class="flex items-start gap-4">
+                                    <span class="material-symbols-outlined text-on-secondary-fixed-variant text-2xl"
+                                        data-icon="mail"></span>
+                                    <p class="text-on-secondary-fixed-variant">hello@eventsbyevara.com</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="relative z-10 pt-12 flex gap-6">
+                            <a class="w-12 h-12 rounded-full border border-on-secondary-fixed-variant/30 flex items-center justify-center text-on-secondary-fixed-variant hover:bg-primary-fixed-dim hover:text-on-primary-fixed transition-all"
+                                href="#">
+                                <span class="material-symbols-outlined" data-icon="share"></span>
+                            </a>
+                            <a class="w-12 h-12 rounded-full border border-on-secondary-fixed-variant/30 flex items-center justify-center text-on-secondary-fixed-variant hover:bg-primary-fixed-dim hover:text-on-primary-fixed transition-all"
+                                href="#">
+                                <span class="material-symbols-outlined" data-icon="camera"></span>
+                            </a>
+                            <a class="w-12 h-12 rounded-full border border-on-secondary-fixed-variant/30 flex items-center justify-center text-on-secondary-fixed-variant hover:bg-primary-fixed-dim hover:text-on-primary-fixed transition-all"
+                                href="#">
+                                <span class="material-symbols-outlined" data-icon="video_library"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer
+        class="bg-surface-container-lowest dark:bg-surface-container-lowest w-full border-t border-outline-variant/10">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-6 md:px-margin-desktop py-xl max-w-[1440px] mx-auto">
+            <div class="space-y-4">
+                <div class="font-display-md text-headline-md text-primary-fixed">Evara</div>
+                <p class="text-on-surface-variant font-body-md">Curating the world's most exquisite celebrations with a
+                    blend of passion and precision.</p>
+            </div>
+            <div class="space-y-4">
+                <h4 class="font-label-lg text-primary-fixed uppercase tracking-wider">Services</h4>
+                <ul class="space-y-2">
+                    <li><a class="text-on-surface-variant hover:text-primary-fixed transition-colors font-label-md"
+                            href="#">Weddings</a></li>
+                    <li><a class="text-on-surface-variant hover:text-primary-fixed transition-colors font-label-md"
+                            href="#">Corporate</a></li>
+                    <li><a class="text-on-surface-variant hover:text-primary-fixed transition-colors font-label-md"
+                            href="#">Galas</a></li>
+                    <li><a class="text-on-surface-variant hover:text-primary-fixed transition-colors font-label-md"
+                            href="#">Private Parties</a></li>
+                </ul>
+            </div>
+            <div class="space-y-4">
+                <h4 class="font-label-lg text-primary-fixed uppercase tracking-wider">Company</h4>
+                <ul class="space-y-2">
+                    <li><a class="text-on-surface-variant hover:text-primary-fixed transition-colors font-label-md"
+                            href="#">Privacy Policy</a></li>
+                    <li><a class="text-on-surface-variant hover:text-primary-fixed transition-colors font-label-md"
+                            href="#">Terms of Service</a></li>
+                    <li><a class="text-on-surface-variant hover:text-primary-fixed transition-colors font-label-md"
+                            href="#">Press Kit</a></li>
+                    <li><a class="text-on-surface-variant hover:text-primary-fixed transition-colors font-label-md"
+                            href="#">Careers</a></li>
+                </ul>
+            </div>
+            <div class="space-y-4">
+                <h4 class="font-label-lg text-primary-fixed uppercase tracking-wider">Newsletter</h4>
+                <p class="text-on-surface-variant font-label-md">Get luxury event inspiration delivered.</p>
+                <div class="flex">
+                    <input
+                        class="bg-surface-container rounded-l-lg border-none px-4 py-2 w-full focus:ring-1 focus:ring-primary-fixed"
+                        placeholder="Email" type="email" />
+                    <button
+                        class="bg-primary-fixed text-on-primary-fixed px-4 py-2 rounded-r-lg font-bold">Join</button>
+                </div>
+            </div>
+        </div>
+        <div
+            class="max-w-[1440px] mx-auto px-6 md:px-margin-desktop py-8 border-t border-outline-variant/10 text-center text-on-surface-variant font-label-md">
+            © 2024 Events By Evara. All rights reserved.
+        </div>
+    </footer>
+    <script>
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-reveal');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('opacity-0', 'transition-all', 'duration-1000', 'translate-y-8');
+            observer.observe(section);
+        });
+
+        const style = document.createElement('style');
+        style.innerHTML = `
+        .animate-reveal {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+        @keyframes bounce-slow {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .animate-bounce-slow {
+            animation: bounce-slow 4s ease-in-out infinite;
+        }
+    `;
+        document.head.appendChild(style);
+    </script>
+</body>
+
+</html>
