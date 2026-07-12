@@ -10,4 +10,4 @@ for (let n of nums){
 }
 console.log('----for each function----');
 //call back function
-nums.forEach( (a) => {console.log(a);});
+nums.forEach( (a,b) => {console.log(a,b);});
