@@ -63,3 +63,51 @@ for (let i = 1; i <= 10; i++) {
     a = b;
     b = next;
 }
+
+
+//WAP to reverse a number
+let num = 12345;
+let reverse = 0;
+
+while (num > 0) {
+    let digit = num % 10;
+    reverse = reverse * 10 + digit;
+    num = Math.floor(num / 10);
+}
+
+console.log("Reversed Number:", reverse);
+
+
+//WAP to check if the number is palindrome
+let number = 121;
+let original = number;
+let r = 0;
+
+while (number > 0) {
+    let digit = number % 10;
+    r = r * 10 + digit;
+    number = Math.floor(number / 10);
+}
+
+if (original === r) {
+    console.log(original + " is a Palindrome");
+} else {
+    console.log(original + " is Not a Palindrome");
+}
+
+
+//WAP to check if the number is Armstrong
+let n = 153;
+let o= n;
+let sum = 0;
+
+while (n > 0) {
+    let digit = n % 10;
+    sum = sum + (digit ** 3);
+    n = Math.floor(n / 10);
+}
+if (sum === o) {
+    console.log(o + " is an Armstrong Number");
+} else {
+    console.log(o + " is Not an Armstrong Number");
+}

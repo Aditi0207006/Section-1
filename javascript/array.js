@@ -1,7 +1,11 @@
-const arr = [ 'hello', 27 , false , null]
+//Elements can be of different types 
+//arrays are dynamic- support insertion , deletion , replacement 
+const arr = [ 'hello', 27 , false , null];
 console.log(Array.isArray(arr));
 
 const movies = ['Jab WE Met', '3 Idiots', 'Idli Kadhai', 'DHURANDHAR', 'Chhichhore'];
+
+console.log(movies.length);
 
 //indexing
 console.log(movies[3]);
